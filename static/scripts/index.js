@@ -27,8 +27,13 @@ $(document).ready(function () {
             audioPlayer.play();
 
         } catch (error) {
-            jokeAlert.innerHTML = "Erro no tópico enviado."
-            jokeAlert.hidden = false
+            if (error.response.status == 429) {
+                jokeAlert.innerHTML = "Você já fez muitas requisições, por favor espere 1 minuto para enviar a próxima."
+                jokeAlert.hidden = false
+            } else {
+                jokeAlert.innerHTML = "Erro no tópico enviado."
+                jokeAlert.hidden = false
+            }
         }
 
         document.getElementById("jokeInput").value = ""
