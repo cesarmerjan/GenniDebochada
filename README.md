@@ -6,4 +6,4 @@ A aplicação não aceita temas relacionados a pessoas.
 # Acesse o sistema para testar aqui:
 https://genni-debochada-68e2ea06f976.herokuapp.com/
 
-![plot](./static/images/frontend-sample.png)
+![plot](./src/static/images/frontend-sample.png)
