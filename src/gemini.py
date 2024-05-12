@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-from settings import (
+from src.settings import (
     GEMINI_GENERATION_CONFIG,
     GEMINI_SAFETY_SETTINGS,
     GEMINI_SYSTEM_INSTRUCTION,

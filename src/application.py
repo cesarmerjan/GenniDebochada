@@ -5,7 +5,7 @@ from collections import defaultdict
 from flask import Flask, render_template, request, send_file
 from flask_cors import CORS, cross_origin
 
-import services
+import src.services as services
 
 application = Flask(__name__, static_url_path="/static")
 CORS(application)

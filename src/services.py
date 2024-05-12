@@ -2,8 +2,8 @@ import tempfile
 
 from gtts import gTTS
 
-from gemini import GEMINI
-from settings import GEMINI_TOPIC_LENGTH_LIMIT, GEMINI_TOPIC_VALIDATION_SAMPLES
+from src.gemini import GEMINI
+from src.settings import GEMINI_TOPIC_LENGTH_LIMIT, GEMINI_TOPIC_VALIDATION_SAMPLES
 
 
 class TopicNotAllowed(Exception):

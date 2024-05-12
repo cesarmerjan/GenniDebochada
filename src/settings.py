@@ -4,7 +4,7 @@ import os
 import google.generativeai as genai
 from dotenv import load_dotenv
 
-from utils import strtobool
+from src.utils import strtobool
 
 ROOT_DIRECTORY: str = os.path.dirname(os.path.abspath(__file__))
 DOTENV_PATH: str = os.path.join(ROOT_DIRECTORY, ".env")
