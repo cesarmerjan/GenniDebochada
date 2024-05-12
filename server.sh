@@ -1,1 +1,1 @@
-gunicorn --bind 0.0.0.0:5000 run:application --workers 1
+gunicorn run:application --bind 0.0.0.0:5000 --workers 1

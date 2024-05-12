@@ -1,1 +1,1 @@
-web: gunicorn run:application --host=0.0.0.0 --port=${PORT:-5000} --workers 1
+web: gunicorn run:application --bind=0.0.0.0:${PORT:-5000} --workers 1
