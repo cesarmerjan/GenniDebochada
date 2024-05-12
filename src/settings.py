@@ -18,7 +18,7 @@ GEMINI_GENERATION_CONFIG: dict[str, int] = {
     "temperature": 0.5,
     "top_p": 0.95,
     "top_k": 0,
-    "max_output_tokens": 8192,
+    # "max_output_tokens": 8192,
     "candidate_count": 1,
 }
 
