@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/acid-icon.ico') }}" sizes="16x16"
+        type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap-5.0.2/css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='vendors/bootstrap-5.0.2/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/jquery-3.7.0/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/axios-1.6.2/axios.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+    <title>Gênni Debochada</title>
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+
+            <div class="mt-4 p-5 rounded my-jumbotron">
+
+                <div class="row">
+                    <h1 class="display-4">Gênni Debochada</h1>
+                </div>
+
+                <div class="row">
+                    <p class="lead">Olá eu sou a Gênni, uma comediante criada com AI.</p>
+                    <p class="lead">Me manda os tópicos que eu faço um show para você ;).</p>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="alert alert-danger" role="alert" id="jokeAlert" hidden></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-success" type="button" id="jokeButton">Enviar</button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Escreva os tópicos" aria-label=""
+                                aria-describedby="basic-addon1" id="jokeInput">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="spinner-grow text-success" role="status" id="jokeSpinner" hidden>
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="d-flex align-items-center">
+                        <audio id="audioPlayer" controls controlsList="nodownload" src="" hidden></audio>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+
+<script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+
+</html>

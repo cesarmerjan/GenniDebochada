@@ -1,0 +1,1 @@
+web: uvicorn run:application --host=0.0.0.0 --port=${PORT:-5000} --workers 1
