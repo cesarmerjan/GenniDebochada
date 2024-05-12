@@ -26,7 +26,7 @@ $(document).ready(function () {
             const audioURL = URL.createObjectURL(audioBlob);
             audioPlayer.src = audioURL;
             audioPlayerGreeting.pause();
-            audio.currentTime = 0;
+            audioPlayerGreeting.currentTime = 0;
             audioPlayer.play();
 
         } catch (error) {
@@ -35,12 +35,12 @@ $(document).ready(function () {
                 jokeAlert.innerHTML = "Você já fez muitas requisições, por favor espere 1 minuto para enviar a próxima.";
                 jokeAlert.hidden = false;
                 audioPlayerGreeting.pause();
-                audio.currentTime = 0;
+                audioPlayerGreeting.currentTime = 0;
             } else {
                 jokeAlert.innerHTML = "Erro no tópico enviado.";
                 jokeAlert.hidden = false;
                 audioPlayerGreeting.pause();
-                audio.currentTime = 0;
+                audioPlayerGreeting.currentTime = 0;
             }
         }
 
