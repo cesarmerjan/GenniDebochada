@@ -1,4 +1,5 @@
 import functools
+import logging
 import time
 from collections import defaultdict
 
@@ -6,6 +7,8 @@ from flask import Flask, render_template, request, send_file
 from flask_cors import CORS, cross_origin
 
 import src.services as services
+
+logger = logging.getLogger(__name__)
 
 application = Flask(__name__, static_url_path="/static")
 CORS(application)
@@ -51,5 +54,6 @@ def make_a_joke(topic):
         text = services.generate_joke(topic)
         audio = services.text_to_speech(text)
         return send_file(audio, mimetype="audios/mp3", as_attachment=False)
-    except Exception:
+    except Exception as error:
+        logger.exception(str(error), exc_info=True)
         return {"message": "Internal Server Error"}, 500
